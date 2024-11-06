@@ -1,0 +1,129 @@
+/* board main */
+
+@mixin board-btn {
+  border: 0.0938rem solid skyblue;
+  border-radius: 0.5rem;
+  background-color: skyblue;
+  color: white;
+  padding: 0.625rem;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo';
+}
+
+table {
+  width: 100%;
+}
+
+.b-wrap,
+.i-wrap {
+  margin: 3rem;
+}
+.b-title,
+.i-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addpost {
+  display: flex;
+  justify-content: flex-end;
+}
+.write {
+  @include board-btn();
+}
+
+// board main table
+.b-main {
+  margin: 1.25rem 0;
+  text-align: center;
+}
+.bt-head {
+  background-color: navy;
+  color: white;
+}
+.checkpost:hover {
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+}
+.bt-tr {
+  line-height: 2;
+}
+.bt-title {
+  font-weight: 700;
+}
+.bt-date {
+  font-size: 0.875rem;
+}
+
+/* board detail */
+.r-wrap {
+  margin: 3.5rem 0;
+}
+.r-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.r-table {
+  margin: 3.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.r-key,
+.r-value {
+  line-height: 1.8;
+  border: 1px solid navy;
+  padding: 12px 24px !important;
+}
+.r-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+
+  .rb-edit,
+  .rb-delete {
+    @include board-btn();
+  }
+}
+
+/* board form */
+.i-area {
+  margin: 3rem 0;
+}
+.i-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.i-key {
+  text-align: right !important;
+  padding: 0 0.375rem;
+}
+.i-value {
+  text-align: left !important;
+}
+input,
+textarea {
+  border: 0.0938rem solid skyblue;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  min-width: 17.5rem;
+  font-family: 'NanumSquareNeo';
+  font-size: 16px;
+  line-height: 1.8;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.i-btn {
+  min-width: 12.5rem;
+  @include board-btn();
+}

@@ -1,0 +1,25 @@
+// header style
+
+header {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header-txt {
+  font-weight: 600;
+}
+.header-btns {
+  margin: 1rem;
+}
