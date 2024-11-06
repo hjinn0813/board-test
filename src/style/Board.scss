@@ -8,6 +8,11 @@
   padding: 0.625rem;
   cursor: pointer;
   font-family: 'NanumSquareNeo';
+
+  &:hover {
+    background-color: transparent;
+    color: skyblue;
+  }
 }
 
 table {
@@ -87,7 +92,8 @@ table {
   gap: 8px;
 
   .rb-edit,
-  .rb-delete {
+  .rb-delete,
+  .rb-rewind {
     @include board-btn();
   }
 }

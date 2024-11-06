@@ -70,6 +70,9 @@ export default function Read() {
         </tbody>
       </table>
       <div className="r-btns">
+        <button className="rb-rewind" onClick={() => navigate('/board')}>
+          목록
+        </button>
         <button className="rb-edit" onClick={handleEdit}>
           수정
         </button>
