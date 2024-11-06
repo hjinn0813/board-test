@@ -114,6 +114,17 @@ table {
 }
 .i-value {
   text-align: left !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.char-count {
+  color: gray;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  min-width: 2.8125rem;
+  text-align: right;
 }
 input,
 textarea {

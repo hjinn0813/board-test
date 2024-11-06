@@ -16,6 +16,7 @@ export default function Input() {
     title: '',
     content: '',
   });
+  const MAX_LENGTH = 50; // 최대 글자수 제한
 
   // 서버에서 기존 게시글 데이터 가져오기
   const { data: postData, isLoading } = useQuery({
@@ -42,10 +43,12 @@ export default function Input() {
   // 입력값 변경 핸들러
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    if (value.length <= MAX_LENGTH) {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   // 등록 및 수정 요청을 처리하는 mutation
@@ -85,6 +88,9 @@ export default function Input() {
                   value={formData.name}
                   onChange={handleChange}
                 />
+                <div className="char-count">
+                  {formData.name.length}/{MAX_LENGTH}
+                </div>
               </td>
             </tr>
             <tr>
@@ -96,6 +102,9 @@ export default function Input() {
                   value={formData.title}
                   onChange={handleChange}
                 />
+                <div className="char-count">
+                  {formData.title.length}/{MAX_LENGTH}
+                </div>
               </td>
             </tr>
             <tr>
@@ -108,6 +117,9 @@ export default function Input() {
                   value={formData.content}
                   onChange={handleChange}
                 ></textarea>
+                <div className="char-count">
+                  {formData.content.length}/{MAX_LENGTH}
+                </div>
               </td>
             </tr>
           </tbody>
