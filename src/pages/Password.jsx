@@ -49,8 +49,6 @@ export default function Password() {
       return;
     }
 
-    console.log('비밀번호 전송:', password, typeof password);
-
     try {
       const resp = await axios.post('http://127.0.0.1:8001/verify_pw', {
         password: password,

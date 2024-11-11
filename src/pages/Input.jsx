@@ -112,13 +112,6 @@ export default function Input() {
   const handleSubmit = async () => {
     const isPwValid = await validatePw();
     if (isPwValid) {
-      console.log(
-        formData,
-        typeof formData.name,
-        typeof formData.password,
-        typeof formData.title,
-        typeof formData.content
-      );
       mutation.mutate();
       // 비번 검증 통과하면 useMutation 실행
     }
