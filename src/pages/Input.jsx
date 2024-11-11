@@ -100,7 +100,11 @@ export default function Input() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries('posts'); // 게시글 목록 갱신
-      navigate('/board');
+      if (isEdit) {
+        navigate(`/board/${id}`); // 수정: 디테일 페이지로 이동
+      } else {
+        navigate('/board'); // 등록: 게시글 목록 페이지로 이동
+      }
     },
   });
 
