@@ -24,23 +24,16 @@ export default function Read() {
     queryFn: () => getPostDetail(id),
   });
 
-  /* 게시글 수정으로 연결 */
+  /* 수정 선택하면 비번 입력창으로 연결 */
   const handleEdit = () => {
-    navigate(`/edit/${id}`);
+    navigate(`/valid_pw/${id}?mode=edit`);
   };
 
   /* 게시글 삭제로 연결 */
   const handleDelete = async () => {
     const confirmed = window.confirm('정말 삭제하시겠습니까?');
     if (confirmed) {
-      try {
-        await axios.delete(`http://127.0.0.1:8001/board/${id}`);
-        alert('게시글 삭제 성공!🙌');
-        navigate('/board');
-      } catch (error) {
-        console.log('삭제 실패:', error);
-        alert('게시글 삭제 실패!');
-      }
+      navigate(`/valid_pw/${id}?mode=delete`);
     }
   };
 

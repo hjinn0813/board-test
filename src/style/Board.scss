@@ -64,11 +64,14 @@ table {
   font-size: 0.875rem;
 }
 
-/* board detail */
-.r-wrap {
+// ============================================================
+/* board detail, 비번 입력창 */
+.r-wrap,
+.pw-wrap {
   margin: 3.5rem 0;
 }
-.r-title {
+.r-title,
+.pw-title {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -78,6 +81,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .r-key,
 .r-value {
@@ -98,6 +102,43 @@ table {
   }
 }
 
+.pw-table {
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pw-btn {
+  @include board-btn();
+}
+.pw-key,
+.pw-value {
+  line-height: 2;
+  margin: 0.5rem;
+}
+.pw-key {
+  text-align: right !important;
+}
+.pw-value {
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pw-input {
+  border: 0.0938rem solid skyblue;
+  border-radius: 0.5rem;
+  padding: 8px;
+  font-family: 'NanumSquareNeo';
+  font-size: 16px;
+  line-height: 1.8;
+}
+.error-msg {
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+// ============================================================
 /* board form */
 .i-area {
   margin: 3rem 0;

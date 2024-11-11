@@ -4,6 +4,7 @@ import Main from './pages/Main';
 import Board from './pages/Board';
 import Input from './pages/Input';
 import Read from './pages/Read';
+import Password from './pages/Password';
 import './style/font.scss';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/newpost" element={<Input />} />
           <Route path="/edit/:id" element={<Input />} />
           <Route path="/board/:id" element={<Read />} />
+          <Route path="/valid_pw/:id" element={<Password />} />
         </Routes>
       </Router>
     </div>
