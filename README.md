@@ -1,5 +1,7 @@
 # 게시판 페이지 제작 연습 (2024/11)
 
+- 기능적인 부분을 중점적으로 제작함
+
 - ### Frontend:
 
   ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
