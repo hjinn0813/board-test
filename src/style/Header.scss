@@ -6,7 +6,7 @@ header {
   display: flex;
   flex-direction: row;
   background-color: lightgrey;
-  padding: 20px;
+  padding: 12px;
 }
 
 .header-link {
@@ -19,7 +19,30 @@ header {
 }
 .header-txt {
   font-weight: 600;
+
+  &:hover {
+    color: white;
+  }
+
+  // hover underline
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    border-bottom: 3px solid white;
+    transition: width 250ms ease-out;
+    left: auto;
+    right: 0;
+    width: 0;
+    padding: 0.25rem 0;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
 }
 .header-btns {
-  margin: 1rem;
+  margin: 0.5rem;
 }

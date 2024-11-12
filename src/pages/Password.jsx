@@ -57,6 +57,7 @@ export default function Password() {
       });
 
       if (resp.data.success) {
+        // 백엔드 엔드포인트의 pwd_context.verify() 결과가 여기로 전달
         if (mode === 'edit') {
           navigate(`/edit/${id}`);
         } else if (mode === 'delete') {
