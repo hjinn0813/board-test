@@ -15,19 +15,19 @@ import './style/font.scss';
 function App() {
   return (
     <div className="container">
-      <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}>
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/board" element={<Board />} />
-            <Route path="/newpost" element={<Input />} />
-            <Route path="/edit/:id" element={<Input />} />
-            <Route path="/board/:id" element={<Read />} />
-            <Route path="/valid_pw/:id" element={<Password />} />
-          </Routes>
-        </Router>
-      </BrowserRouter>
+      {/* <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}> */}
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/board" element={<Board />} />
+          <Route path="/newpost" element={<Input />} />
+          <Route path="/edit/:id" element={<Input />} />
+          <Route path="/board/:id" element={<Read />} />
+          <Route path="/valid_pw/:id" element={<Password />} />
+        </Routes>
+      </Router>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
